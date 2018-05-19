@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Apr 11 22:34:15 BDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0162-b58e-c2b6-0000026f4f50 
+on database directory memory:/home/abdullah/Documents/workspace-sts-3.9.2.RELEASE/FamilyAssistance/testdb with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/home/abdullah/.m2/repository/org/apache/derby/derby/10.14.1.0/derby-10.14.1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_162-b12
+user.dir=/home/abdullah/Documents/workspace-sts-3.9.2.RELEASE/FamilyAssistance
+os.name=Linux
+os.arch=amd64
+os.version=4.8.0-53-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
