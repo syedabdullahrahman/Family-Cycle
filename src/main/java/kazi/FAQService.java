@@ -1,21 +1,15 @@
 package kazi;
 
+import org.alicebot.ab.*;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
 import java.io.File;
-
-import org.alicebot.ab.Bot;
-import org.alicebot.ab.Chat;
-import org.alicebot.ab.History;
-import org.alicebot.ab.MagicBooleans;
-import org.alicebot.ab.MagicStrings;
-import org.alicebot.ab.utils.IOUtils;
+import java.util.Hashtable;
 
 @Service
 public class FAQService {
 
-    Hashtable<String, String> qa = new Hashtable<String, String>();
+    Hashtable<String, String> qa = new Hashtable<>();
     private static final boolean TRACE_MODE = false;
     static String botName = "super";
 
@@ -84,7 +78,7 @@ public class FAQService {
 /*        if (qa.containsKey(question)) {
             t.put("question", qa.get(question));
         } else
-            t.put("question", "No answer found !!!");*/
+            t.put("question", "No answer found !!!");  */
 
 
         return t;
