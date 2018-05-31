@@ -23,7 +23,7 @@ public class FAQService {
                 "Although the ante has been rising as to what is considered typical for a wedding, simplicity can be elegant.");
         qa.put("isitnecessarytofeelchemistrybetweenusforthistobetherightpersontomarry","Chemistry, or feeling like you click with another person, " +
                 "is a natural part of a deepening relationship, and a wonderful part of falling in love, but unfortunately, chemistry is sometimes confused with infatuation, which can be fleeting.");
-        qa.put("doesntlivingtogetherbeforemarriagepreventmefrommarryingthewrongpersonandthusgettingdivorcedlateron","Although it may sound counterintuitive, studies show that cohabiting couples.")
+        qa.put("doesntlivingtogetherbeforemarriagepreventmefrommarryingthewrongpersonandthusgettingdivorcedlateron","Although it may sound counterintuitive, studies show that cohabiting couples.");
     }
 
     public Hashtable<String, String> getAnswer(String question) {
