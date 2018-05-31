@@ -15,11 +15,14 @@ public class FAQService {
         qa.put("Fine","How about your day?");
     }
 
-    public String getAnswer(String question) {
-        if (qa.containsKey(question))
-            return qa.get(question);
+    public Hashtable<String, String> getAnswer(String question) {
+        Hashtable<String, String> t = new Hashtable<>();
+        if (qa.containsKey(question)) {
+            t.put("question", qa.get(question));
+        }
         else
-            return "No answer found !!!";
+            t.put("question", "No answer found !!!");
+        return t;
     }
     public Hashtable<String, String> getAll() {
         return qa;
