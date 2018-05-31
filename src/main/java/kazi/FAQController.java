@@ -12,7 +12,7 @@ public class FAQController {
     @Autowired  //need dependecy injection
     FAQService fq;
 
-    @RequestMapping("{question}")
+    @RequestMapping("/{question}")
     public Hashtable<String, String> getAns(@PathVariable("question") String question){
         return fq.getAnswer(question);
     }
