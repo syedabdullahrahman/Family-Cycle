@@ -3,38 +3,93 @@ package kazi;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.io.File;
+
+import org.alicebot.ab.Bot;
+import org.alicebot.ab.Chat;
+import org.alicebot.ab.History;
+import org.alicebot.ab.MagicBooleans;
+import org.alicebot.ab.MagicStrings;
+import org.alicebot.ab.utils.IOUtils;
 
 @Service
 public class FAQService {
 
     Hashtable<String, String> qa = new Hashtable<String, String>();
+    private static final boolean TRACE_MODE = false;
+    static String botName = "super";
 
     public FAQService() {
-        qa.put("hi","Hello");
-        qa.put("howareyou","Fine, and you?");
-        qa.put("fine","How about your day?");
-        qa.put("whyshouldiattendamarriagepreparationprogram","We've known each other for a long time and can't " +
+
+        qa.put("hi", "Hello");
+        qa.put("howareyou", "Fine, and you?");
+        qa.put("fine", "How about your day?");
+        qa.put("whyshouldiattendamarriagepreparationprogram", "We've known each other for a long time and can't " +
                 "imagine we'd learn anything new. " +
                 "You don't have to discover all the things that make a marriage " +
                 "work by trial and error. Others have done some of that work for you.");
-        qa.put("howmuchincomeshouldwehavebetweenustomarry","Many couples, especially younger ones, start their married lives together without a large income, and possibly with debt. " +
+        qa.put("howmuchincomeshouldwehavebetweenustomarry", "Many couples, especially younger ones, start their married lives together without a large income, and possibly with debt. " +
                 "This can be a challenge, but it shouldn't necessarily delay marriage.");
-        qa.put("howmuchdoesatypicalweddingcost","Many wedding planners will tell you that the average wedding costs between $20,000-$30,000, but it definitely doesn't have to! " +
+        qa.put("howmuchdoesatypicalweddingcost", "Many wedding planners will tell you that the average wedding costs between $20,000-$30,000, but it definitely doesn't have to! " +
                 "Although the ante has been rising as to what is considered typical for a wedding, simplicity can be elegant.");
-        qa.put("isitnecessarytofeelchemistrybetweenusforthistobetherightpersontomarry","Chemistry, or feeling like you click with another person, " +
+        qa.put("isitnecessarytofeelchemistrybetweenusforthistobetherightpersontomarry", "Chemistry, or feeling like you click with another person, " +
                 "is a natural part of a deepening relationship, and a wonderful part of falling in love, but unfortunately, chemistry is sometimes confused with infatuation, which can be fleeting.");
-        qa.put("doesntlivingtogetherbeforemarriagepreventmefrommarryingthewrongpersonandthusgettingdivorcedlateron","Although it may sound counterintuitive, studies show that cohabiting couples.");
+        qa.put("doesntlivingtogetherbeforemarriagepreventmefrommarryingthewrongpersonandthusgettingdivorcedlateron", "Although it may sound counterintuitive, studies show that cohabiting couples.");
+    }
+
+    private static String getResourcesPath() {
+        File currDir = new File(".");
+        String path = currDir.getAbsolutePath();
+        path = path.substring(0, path.length() - 2);
+        System.out.println(path);
+        String resourcesPath = path + File.separator + "src" + File.separator + "main" + File.separator + "resources";
+        return resourcesPath;
     }
 
     public Hashtable<String, String> getAnswer(String question) {
         Hashtable<String, String> t = new Hashtable<>();
-        if (qa.containsKey(question)) {
-            t.put("question", qa.get(question));
+
+        try {
+            String resourcesPath = getResourcesPath();
+            MagicBooleans.trace_mode = TRACE_MODE;
+            Bot bot = new Bot("super", resourcesPath);
+            Chat chatSession = new Chat(bot);
+            bot.brain.nodeStats();
+
+
+            if ((question == null) || (question.length() < 1))
+                question = MagicStrings.null_input;
+            else {
+                String request = question;
+                if (MagicBooleans.trace_mode)
+                {
+                    ((History) chatSession.thatHistory.get(0)).get(0);
+                    chatSession.predicates.get("topic");
+                }
+
+                String response = chatSession.multisentenceRespond(request);
+                while (response.contains("&lt;"))
+                    response = response.replace("&lt;", "<");
+                while (response.contains("&gt;"))
+                    response = response.replace("&gt;", ">");
+                //System.out.println("Robot : " + response);
+
+                t.put("question", response);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        else
-            t.put("question", "No answer found !!!");
+
+/*        if (qa.containsKey(question)) {
+            t.put("question", qa.get(question));
+        } else
+            t.put("question", "No answer found !!!");*/
+
+
         return t;
     }
+
     public Hashtable<String, String> getAll() {
         return qa;
     }
