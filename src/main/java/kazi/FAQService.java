@@ -1,6 +1,5 @@
 package kazi;
 
-import org.alicebot.ab.*;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -10,8 +9,6 @@ import java.util.Hashtable;
 public class FAQService {
 
     Hashtable<String, String> qa = new Hashtable<>();
-    private static final boolean TRACE_MODE = false;
-    static String botName = "super";
 
     public FAQService() {
 
@@ -43,42 +40,10 @@ public class FAQService {
     public Hashtable<String, String> getAnswer(String question) {
         Hashtable<String, String> t = new Hashtable<>();
 
-        try {
-            String resourcesPath = getResourcesPath();
-            MagicBooleans.trace_mode = TRACE_MODE;
-            Bot bot = new Bot("super", resourcesPath);
-            Chat chatSession = new Chat(bot);
-            bot.brain.nodeStats();
-
-
-            if ((question == null) || (question.length() < 1))
-                question = MagicStrings.null_input;
-            else {
-                String request = question;
-                if (MagicBooleans.trace_mode)
-                {
-                    ((History) chatSession.thatHistory.get(0)).get(0);
-                    chatSession.predicates.get("topic");
-                }
-
-                String response = chatSession.multisentenceRespond(request);
-                while (response.contains("&lt;"))
-                    response = response.replace("&lt;", "<");
-                while (response.contains("&gt;"))
-                    response = response.replace("&gt;", ">");
-                //System.out.println("Robot : " + response);
-
-                t.put("question", response);
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-/*        if (qa.containsKey(question)) {
+        if (qa.containsKey(question)) {
             t.put("question", qa.get(question));
         } else
-            t.put("question", "No answer found !!!");  */
+            t.put("question", "No answer found !!!");
 
 
         return t;
