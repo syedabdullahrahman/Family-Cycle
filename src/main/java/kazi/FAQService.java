@@ -11,7 +11,7 @@ public class FAQService {
 
     public FAQService() {
         qa.put("Hi","Hello");
-        qa.put("How%20are%20you?","Fine, and you?");
+        qa.put("How are you?","Fine, and you?");
         qa.put("Fine","How about your day?");
     }
 
