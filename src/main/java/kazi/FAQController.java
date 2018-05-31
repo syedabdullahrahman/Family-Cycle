@@ -13,7 +13,7 @@ public class FAQController {
     FAQService fq;
 
     @RequestMapping("{question}")
-    public String getKaziByName(@PathVariable("question") String question){
+    public String getAns(@PathVariable("question") String question){
         return fq.getAnswer(question);
     }
     @RequestMapping("/all")
