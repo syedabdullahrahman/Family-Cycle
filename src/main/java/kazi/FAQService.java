@@ -10,9 +10,20 @@ public class FAQService {
     Hashtable<String, String> qa = new Hashtable<String, String>();
 
     public FAQService() {
-        qa.put("Hi","Hello");
-        qa.put("How are you?","Fine, and you?");
-        qa.put("Fine","How about your day?");
+        qa.put("hi","Hello");
+        qa.put("howareyou","Fine, and you?");
+        qa.put("fine","How about your day?");
+        qa.put("whyshouldiattendamarriagepreparationprogram","We've known each other for a long time and can't " +
+                "imagine we'd learn anything new. " +
+                "You don't have to discover all the things that make a marriage " +
+                "work by trial and error. Others have done some of that work for you.");
+        qa.put("howmuchincomeshouldwehavebetweenustomarry","Many couples, especially younger ones, start their married lives together without a large income, and possibly with debt. " +
+                "This can be a challenge, but it shouldn't necessarily delay marriage.");
+        qa.put("howmuchdoesatypicalweddingcost","Many wedding planners will tell you that the average wedding costs between $20,000-$30,000, but it definitely doesn't have to! " +
+                "Although the ante has been rising as to what is considered typical for a wedding, simplicity can be elegant.");
+        qa.put("isitnecessarytofeelchemistrybetweenusforthistobetherightpersontomarry","Chemistry, or feeling like you click with another person, " +
+                "is a natural part of a deepening relationship, and a wonderful part of falling in love, but unfortunately, chemistry is sometimes confused with infatuation, which can be fleeting.");
+        qa.put("doesntlivingtogetherbeforemarriagepreventmefrommarryingthewrongpersonandthusgettingdivorcedlateron","Although it may sound counterintuitive, studies show that cohabiting couples.")
     }
 
     public Hashtable<String, String> getAnswer(String question) {
