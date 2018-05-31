@@ -13,7 +13,7 @@ public class FAQController {
     FAQService fq;
 
     @RequestMapping("{question}")
-    public String getAns(@PathVariable("question") String question){
+    public Hashtable<String, String> getAns(@PathVariable("question") String question){
         return fq.getAnswer(question);
     }
     @RequestMapping("/all")
