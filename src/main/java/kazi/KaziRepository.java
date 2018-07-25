@@ -8,5 +8,6 @@ import java.util.List;
 public interface KaziRepository extends CrudRepository<Kazi,Long> {
 
     public List<Kazi> findByKaziLicenceNumber(Long id);
-    public Kazi findByKaziEmailAndKaziPassword(String username,String password);
+
+    public Kazi findByKaziEmailAndKaziPassword(String email, String password);
 }
