@@ -33,11 +33,4 @@ public class MarriedCoupleService {
         return "Success";
     }
 
-    public void updateKazi(Kazi temp, Long id) {
-
-    }
-
-    public void deleteKazi(Kazi temp, Long id) {
-
-    }
 }
