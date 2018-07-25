@@ -188,7 +188,9 @@ public class Kazi {
 }
 */
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 
 
@@ -207,6 +209,7 @@ public class Kazi {
     public Kazi() {
 
     }
+
     public Kazi(String kaziUserName, String kaziEmail, String kaziPassword) {
         this.kaziUserName = kaziUserName;
         this.kaziEmail = kaziEmail;
