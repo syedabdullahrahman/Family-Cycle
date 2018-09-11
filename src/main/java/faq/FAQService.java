@@ -1,4 +1,4 @@
-package kazi;
+package faq;
 
 import org.springframework.stereotype.Service;
 

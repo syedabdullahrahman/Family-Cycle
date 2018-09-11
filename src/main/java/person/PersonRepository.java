@@ -1,4 +1,4 @@
-package kazi;
+package person;
 
 import org.springframework.data.repository.CrudRepository;
 

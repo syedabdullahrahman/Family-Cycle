@@ -3,7 +3,7 @@ package kazi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.List;
 
 @Service
 public class KaziService {
@@ -34,7 +34,7 @@ public class KaziService {
 	}
 
 	public String addkazi(Kazi temp) {
-//		kazi.put(temp.id,temp);
+//		main.put(temp.id,temp);
 //		k.add(temp);
 		if(!getKazi(temp.kaziLicenceNumber).isEmpty()) return "Kazi Exists";
 		kaziRepository.save(temp);

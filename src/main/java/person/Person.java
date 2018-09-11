@@ -1,4 +1,4 @@
-package kazi;
+package person;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

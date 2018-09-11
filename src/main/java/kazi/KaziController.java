@@ -1,9 +1,9 @@
 package kazi;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/kazi")
@@ -30,20 +30,20 @@ public class KaziController {
 		return ks.getKazi(id);
 	}
 
-	//localhost:8080/kazi/login/Mahboob%20Hasan/1 etc...
+	//localhost:8080/main/login/Mahboob%20Hasan/1 etc...
 	@RequestMapping("/login/{email}/{password}")
 	public Kazi getKaziByName(@PathVariable("email") String email,@PathVariable("password") String password){
 		return ks.getKaziByUserNameandPassword(email,password);
 	}
 
 
-//	//localhost:8080/kazi/byname?id=1&name=Mahboob%20Hasan etc...
+//	//localhost:8080/main/byname?id=1&name=Mahboob%20Hasan etc...
 //	@RequestMapping(value = "/byname",params = {"id","name"})
 //	public List<Kazi> getKaziByName(@RequestParam("name") String name, @RequestParam("id") Long id){
 //		return ks.getKaziByName(name,id);
 //	}
 
-	//@RequestMapping("/kazi")
+	//@RequestMapping("/main")
 
 	@RequestMapping(method=RequestMethod.POST, value="/addkazi")  //specify the method otherwise default GET method work
 	public Object addKazi(@RequestBody Kazi temp) { //requestbody theke object ta niyo pls.

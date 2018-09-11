@@ -1,4 +1,4 @@
-package kazi;
+package marriedcouple;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

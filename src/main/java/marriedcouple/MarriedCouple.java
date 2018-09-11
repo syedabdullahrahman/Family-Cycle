@@ -1,4 +1,4 @@
-package kazi;
+package marriedcouple;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
