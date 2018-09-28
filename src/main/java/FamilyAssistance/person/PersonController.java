@@ -1,4 +1,4 @@
-package person;
+package FamilyAssistance.person;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -9,7 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/FamilyAssistance/person")
 
 public class PersonController {
     @Autowired

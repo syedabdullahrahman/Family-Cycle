@@ -1,4 +1,4 @@
-package kazi;
+package FamilyAssistance.kazi;
 /*
 import java.io.Serializable;
 import javax.persistence.Basic;

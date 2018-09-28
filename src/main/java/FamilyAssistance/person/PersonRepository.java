@@ -1,4 +1,4 @@
-package person;
+package FamilyAssistance.person;
 
 import org.springframework.data.repository.CrudRepository;
 

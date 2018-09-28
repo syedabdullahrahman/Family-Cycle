@@ -1,4 +1,4 @@
-package faq;
+package FamilyAssistance.faq;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Hashtable;
 
 @RestController
-@RequestMapping("/faq")
+@RequestMapping("/FamilyAssistance/faq")
 public class FAQController {
 
     @Autowired  //need dependecy injection

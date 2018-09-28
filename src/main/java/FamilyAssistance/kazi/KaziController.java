@@ -1,4 +1,4 @@
-package kazi;
+package FamilyAssistance.kazi;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/kazi")
+@RequestMapping("/FamilyAssistance/kazi")
 public class KaziController {
 
 	@Autowired  //need dependecy injection

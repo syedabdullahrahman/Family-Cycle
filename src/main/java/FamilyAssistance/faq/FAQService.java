@@ -1,4 +1,4 @@
-package faq;
+package FamilyAssistance.faq;
 
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ public class FAQService {
                 "This can be a challenge, but it shouldn't necessarily delay marriage.");
         qa.put("howmuchdoesatypicalweddingcost", "Many wedding planners will tell you that the average wedding costs between $20,000-$30,000, but it definitely doesn't have to! " +
                 "Although the ante has been rising as to what is considered typical for a wedding, simplicity can be elegant.");
-        qa.put("isitnecessarytofeelchemistrybetweenusforthistobetherightpersontomarry", "Chemistry, or feeling like you click with another person, " +
+        qa.put("isitnecessarytofeelchemistrybetweenusforthistobetherightpersontomarry", "Chemistry, or feeling like you click with another FamilyAssistance.person, " +
                 "is a natural part of a deepening relationship, and a wonderful part of falling in love, but unfortunately, chemistry is sometimes confused with infatuation, which can be fleeting.");
         qa.put("doesntlivingtogetherbeforemarriagepreventmefrommarryingthewrongpersonandthusgettingdivorcedlateron", "Although it may sound counterintuitive, studies show that cohabiting couples.");
     }
