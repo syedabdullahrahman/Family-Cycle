@@ -34,7 +34,7 @@ public class KaziService {
 	}
 
 	public String addkazi(Kazi temp) {
-//		root.put(temp.id,temp);
+//		FamilyAssistance.put(temp.id,temp);
 //		k.add(temp);
 		if(!getKazi(temp.kaziLicenceNumber).isEmpty()) return "Kazi Exists";
 		kaziRepository.save(temp);

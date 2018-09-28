@@ -1,4 +1,4 @@
-package root;
+package FamilyAssistance;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
