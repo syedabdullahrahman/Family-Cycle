@@ -24,7 +24,7 @@ public class MarriageRegistrationService {
         return marriageRegRepository.findByRegNumber(regNum);
     }
 
-    public Iterable<MarriageRegistration> getAll() {
+    public List<MarriageRegistration> getAll() {
         return marriageRegRepository.findAll();
     }
 

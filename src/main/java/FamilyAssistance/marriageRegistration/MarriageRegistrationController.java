@@ -13,7 +13,7 @@ public class MarriageRegistrationController {
     MarriageRegistrationService mrs;
 
     @RequestMapping("/all")
-    public Iterable<MarriageRegistration> getAll() {
+    public List<MarriageRegistration> getAll() {
         return mrs.getAll();
     }
 
