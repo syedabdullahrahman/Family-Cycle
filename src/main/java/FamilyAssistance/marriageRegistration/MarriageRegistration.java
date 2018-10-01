@@ -1,6 +1,5 @@
 package FamilyAssistance.marriageRegistration;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,7 +8,7 @@ import javax.persistence.Id;
 public class MarriageRegistration {
 
     String gName, bName, gAddress, bAddress, gDob, bDob, gFather, gMother, bFather, bMother, gBlood, bBlood, wit1name, wit1address, wit2name, wit2address;
-
+    String date;
     @Id
     @Column(name = "marriageRegNumber")
     String regNumber;
@@ -21,7 +20,8 @@ public class MarriageRegistration {
 
     }
 
-    public MarriageRegistration(String gName, String bName, String gAddress, String bAddress, String gDob, String bDob, String gFather, String gMother, String bFather, String bMother, String gBlood, String bBlood, String wit1name, String wit1address, String wit2name, String wit2address, String regNumber, String kaziLicence, int denmohor) {
+    public MarriageRegistration(String date, String gName, String bName, String gAddress, String bAddress, String gDob, String bDob, String gFather, String gMother, String bFather, String bMother, String gBlood, String bBlood, String wit1name, String wit1address, String wit2name, String wit2address, String regNumber, String kaziLicence, int denmohor) {
+        this.date = date;
         this.gName = gName;
         this.bName = bName;
         this.gAddress = gAddress;
@@ -41,6 +41,14 @@ public class MarriageRegistration {
         this.regNumber = regNumber;
         this.kaziLicence = kaziLicence;
         Denmohor = denmohor;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getgName() {
