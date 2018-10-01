@@ -14,7 +14,7 @@ public class MarriageRegistration {
     String regNumber;
 
     String kaziLicence;
-    int Denmohor;
+    int denmohor;
 
     public MarriageRegistration() {
 
@@ -40,7 +40,7 @@ public class MarriageRegistration {
         this.wit2address = wit2address;
         this.regNumber = regNumber;
         this.kaziLicence = kaziLicence;
-        Denmohor = denmohor;
+        this.denmohor = denmohor;
     }
 
     public String getDate() {
@@ -196,10 +196,10 @@ public class MarriageRegistration {
     }
 
     public int getDenmohor() {
-        return Denmohor;
+        return denmohor;
     }
 
     public void setDenmohor(int denmohor) {
-        Denmohor = denmohor;
+        denmohor = denmohor;
     }
 }
