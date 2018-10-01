@@ -1,10 +1,10 @@
-package FamilyAssistance.marriedcouple;
+package FamilyAssistance.marriedCouple;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/mc")
+@RequestMapping("/FamilyAssistance/mc")
 public class MarriedCopuleController {
 
     @Autowired

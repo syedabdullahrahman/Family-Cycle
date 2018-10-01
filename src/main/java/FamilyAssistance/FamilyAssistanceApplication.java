@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan({"FamilyAssistance.faq", "FamilyAssistance.kazi", "FamilyAssistance.marriedcouple", "FamilyAssistance.person"})
+@ComponentScan({"FamilyAssistance.faq", "FamilyAssistance.kazi", "FamilyAssistance.marriageRegistration", "FamilyAssistance.marriedCouple", "FamilyAssistance.person"})
 public class FamilyAssistanceApplication {
 
 	public static void main(String[] args) {

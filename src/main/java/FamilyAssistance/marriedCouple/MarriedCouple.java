@@ -1,4 +1,4 @@
-package FamilyAssistance.marriedcouple;
+package FamilyAssistance.marriedCouple;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

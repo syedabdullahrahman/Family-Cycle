@@ -1,4 +1,4 @@
-package FamilyAssistance.marriedcouple;
+package FamilyAssistance.marriedCouple;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
