@@ -3,8 +3,6 @@ package FamilyAssistance.kazi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class KaziService {
 	
@@ -14,9 +12,9 @@ public class KaziService {
 	public KaziService() {
 	}
 
-	public List<Kazi> getKazi(Long licenceno) {
-		
-		return kaziRepository.findByKaziLicenceNumber(licenceno);
+	public Kazi getKazi(String license) {
+
+		return kaziRepository.findByKaziLicenceNumber(license);
 	}
 
 	public Kazi getKaziByUserNameandPassword(String email,String password){
@@ -36,7 +34,7 @@ public class KaziService {
 	public String addkazi(Kazi temp) {
 //		FamilyAssistance.put(temp.id,temp);
 //		k.add(temp);
-		if(!getKazi(temp.kaziLicenceNumber).isEmpty()) return "Kazi Exists";
+		if (!getKazi(temp.kaziLicenceNumber).getKaziEmail().equals("")) return "Kazi Exists";
 		kaziRepository.save(temp);
 		return "Success";
 	}

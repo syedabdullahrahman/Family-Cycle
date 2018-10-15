@@ -1,4 +1,3 @@
-package FamilyAssistance.kazi;
 /*
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -188,6 +187,7 @@ public class Kazi {
 }
 */
 
+package FamilyAssistance.kazi;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -199,28 +199,53 @@ public class Kazi {
 
     @Id
     @Column(name="kaziLicenceNumber")
-    Long kaziLicenceNumber;
+    String kaziLicenceNumber;
 
 
     String kaziUserName;
     String kaziEmail;
     String kaziPassword;
 
+    String name;
+    String eduBackground;
+    String dob;
+    String nid;
+    String tin;
+    String officeAddress;
+    String preferedArea;
+    String contact;
+
     public Kazi() {
 
     }
 
-    public Kazi(String kaziUserName, String kaziEmail, String kaziPassword) {
+    public Kazi(String kaziLicenceNumber, String kaziUserName, String kaziEmail, String kaziPassword) {
         this.kaziUserName = kaziUserName;
         this.kaziEmail = kaziEmail;
         this.kaziPassword = kaziPassword;
+        this.kaziLicenceNumber = kaziLicenceNumber;
     }
 
-    public Long getKaziLicenceNumber() {
+    public Kazi(String kaziLicenceNumber, String kaziUserName, String kaziEmail, String kaziPassword, String name, String eduBackground, String dob, String nid, String tin, String officeAddress, String preferedArea, String contact) {
+        this.kaziLicenceNumber = kaziLicenceNumber;
+        this.kaziUserName = kaziUserName;
+        this.kaziEmail = kaziEmail;
+        this.kaziPassword = kaziPassword;
+        this.name = name;
+        this.eduBackground = eduBackground;
+        this.dob = dob;
+        this.nid = nid;
+        this.tin = tin;
+        this.officeAddress = officeAddress;
+        this.preferedArea = preferedArea;
+        this.contact = contact;
+    }
+
+    public String getKaziLicenceNumber() {
         return kaziLicenceNumber;
     }
 
-    public void setKaziLicenceNumber(Long kaziLicenceNumber) {
+    public void setKaziLicenceNumber(String kaziLicenceNumber) {
         this.kaziLicenceNumber = kaziLicenceNumber;
     }
 

@@ -3,8 +3,6 @@ package FamilyAssistance.kazi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/FamilyAssistance/kazi")
 public class KaziController {
@@ -24,11 +22,6 @@ public class KaziController {
 		return ks.getAll();
 	}
 
-	@RequestMapping("{id}")  //{} er moddhe variable lekhe //@pathvariable er sathe {} mil thakte hobe
-	public List<Kazi> getPerson(@PathVariable("id") Long id) {
-		//lambda expression diya oo kemne jani kore !!!
-		return ks.getKazi(id);
-	}
 
 	//localhost:8080/FamilyAssistance/login/Mahboob%20Hasan/1 etc...
 	@RequestMapping("/login/{email}/{password}")
@@ -64,5 +57,10 @@ public class KaziController {
 		return "Successful Delete Operation";
 		
 	}
-	
+
+	@RequestMapping("{license}")  //{} er moddhe variable lekhe //@pathvariable er sathe {} mil thakte hobe
+	public Kazi getKazi(@PathVariable("license") String license) {
+		//lambda expression diya oo kemne jani kore !!!
+		return ks.getKazi(license);
+	}
 }
