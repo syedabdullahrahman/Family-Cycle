@@ -200,12 +200,6 @@ public class Kazi {
     @Id
     @Column(name="kaziLicenceNumber")
     String kaziLicenceNumber;
-
-
-    String kaziUserName;
-    String kaziEmail;
-    String kaziPassword;
-
     String name;
     String eduBackground;
     String dob;
@@ -214,17 +208,9 @@ public class Kazi {
     String officeAddress;
     String preferedArea;
     String contact;
-
-    public Kazi() {
-
-    }
-
-    /*public Kazi(String kaziLicenceNumber, String kaziUserName, String kaziEmail, String kaziPassword) {
-        this.kaziUserName = kaziUserName;
-        this.kaziEmail = kaziEmail;
-        this.kaziPassword = kaziPassword;
-        this.kaziLicenceNumber = kaziLicenceNumber;
-    }*/
+    String kaziUserName;
+    String kaziEmail;
+    String kaziPassword;
 
     public Kazi(String kaziLicenceNumber, String kaziUserName, String kaziEmail, String kaziPassword, String name, String eduBackground, String dob, String nid, String tin, String officeAddress, String preferedArea, String contact) {
         this.kaziLicenceNumber = kaziLicenceNumber;
@@ -238,6 +224,70 @@ public class Kazi {
         this.tin = tin;
         this.officeAddress = officeAddress;
         this.preferedArea = preferedArea;
+        this.contact = contact;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEduBackground() {
+        return eduBackground;
+    }
+
+    public void setEduBackground(String eduBackground) {
+        this.eduBackground = eduBackground;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public String getNid() {
+        return nid;
+    }
+
+    public void setNid(String nid) {
+        this.nid = nid;
+    }
+
+    public String getTin() {
+        return tin;
+    }
+
+    public void setTin(String tin) {
+        this.tin = tin;
+    }
+
+    public String getOfficeAddress() {
+        return officeAddress;
+    }
+
+    public void setOfficeAddress(String officeAddress) {
+        this.officeAddress = officeAddress;
+    }
+
+    public String getPreferedArea() {
+        return preferedArea;
+    }
+
+    public void setPreferedArea(String preferedArea) {
+        this.preferedArea = preferedArea;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
         this.contact = contact;
     }
 

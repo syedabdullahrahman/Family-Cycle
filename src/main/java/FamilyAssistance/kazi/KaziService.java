@@ -24,16 +24,10 @@ public class KaziService {
 
 	
 	public Iterable<Kazi> getAll(){
-		//ArrayList<Kazi> l = new ArrayList<>();
-		//kazirepo.findAll().forEach(l::add);
-		//return l;
-		//return k;
 		return kaziRepository.findAll();
 	}
 
 	public String addkazi(Kazi temp) {
-//		FamilyAssistance.put(temp.id,temp);
-//		k.add(temp);
 		if (!getKazi(temp.kaziLicenceNumber).getKaziEmail().equals("")) return "Kazi Exists";
 		kaziRepository.save(temp);
 		return "Success";
