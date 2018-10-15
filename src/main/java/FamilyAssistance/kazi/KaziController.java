@@ -58,8 +58,8 @@ public class KaziController {
 		
 	}
 
-	@RequestMapping("{license}")  //{} er moddhe variable lekhe //@pathvariable er sathe {} mil thakte hobe
-	public Kazi getKazi(@PathVariable("license") String license) {
+	@RequestMapping(value = "/findkazi", params = {"license"})
+	public Kazi getKazi(@RequestParam("license") String license) {
 		//lambda expression diya oo kemne jani kore !!!
 		return ks.getKazi(license);
 	}
