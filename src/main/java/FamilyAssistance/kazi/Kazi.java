@@ -219,12 +219,12 @@ public class Kazi {
 
     }
 
-    public Kazi(String kaziLicenceNumber, String kaziUserName, String kaziEmail, String kaziPassword) {
+    /*public Kazi(String kaziLicenceNumber, String kaziUserName, String kaziEmail, String kaziPassword) {
         this.kaziUserName = kaziUserName;
         this.kaziEmail = kaziEmail;
         this.kaziPassword = kaziPassword;
         this.kaziLicenceNumber = kaziLicenceNumber;
-    }
+    }*/
 
     public Kazi(String kaziLicenceNumber, String kaziUserName, String kaziEmail, String kaziPassword, String name, String eduBackground, String dob, String nid, String tin, String officeAddress, String preferedArea, String contact) {
         this.kaziLicenceNumber = kaziLicenceNumber;
