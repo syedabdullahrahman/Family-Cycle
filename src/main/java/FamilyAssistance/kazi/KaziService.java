@@ -28,9 +28,12 @@ public class KaziService {
     }
 
     public String addkazi(Kazi temp) {
+        try {
+            if (!(getKazi(temp.kaziLicenceNumber).equals(new Kazi()))) {
+                return "Kazi Exists";
+            }
+        } catch (Exception e) {
 
-        if (!(getKazi(temp.kaziLicenceNumber).equals(new Kazi()))) {
-            return "Kazi Exists";
         }
 
         kaziRepository.save(temp);
