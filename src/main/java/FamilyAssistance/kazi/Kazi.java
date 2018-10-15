@@ -212,6 +212,10 @@ public class Kazi {
     String kaziEmail;
     String kaziPassword;
 
+    public Kazi() {
+
+        
+    }
     public Kazi(String kaziLicenceNumber, String kaziUserName, String kaziEmail, String kaziPassword, String name, String eduBackground, String dob, String nid, String tin, String officeAddress, String preferedArea, String contact) {
         this.kaziLicenceNumber = kaziLicenceNumber;
         this.kaziUserName = kaziUserName;
