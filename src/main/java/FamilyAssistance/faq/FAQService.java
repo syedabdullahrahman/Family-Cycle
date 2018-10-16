@@ -2,7 +2,6 @@ package FamilyAssistance.faq;
 
 import org.springframework.stereotype.Service;
 
-import java.io.File;
 import java.util.Hashtable;
 
 @Service
@@ -26,15 +25,6 @@ public class FAQService {
         qa.put("isitnecessarytofeelchemistrybetweenusforthistobetherightpersontomarry", "Chemistry, or feeling like you click with another FamilyAssistance.person, " +
                 "is a natural part of a deepening relationship, and a wonderful part of falling in love, but unfortunately, chemistry is sometimes confused with infatuation, which can be fleeting.");
         qa.put("doesntlivingtogetherbeforemarriagepreventmefrommarryingthewrongpersonandthusgettingdivorcedlateron", "Although it may sound counterintuitive, studies show that cohabiting couples.");
-    }
-
-    private static String getResourcesPath() {
-        File currDir = new File(".");
-        String path = currDir.getAbsolutePath();
-        path = path.substring(0, path.length() - 2);
-        System.out.println(path);
-        String resourcesPath = path + File.separator + "src" + File.separator + "main" + File.separator + "resources";
-        return resourcesPath;
     }
 
     public Hashtable<String, String> getAnswer(String question) {

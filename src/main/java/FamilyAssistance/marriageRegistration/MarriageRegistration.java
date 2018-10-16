@@ -200,6 +200,6 @@ public class MarriageRegistration {
     }
 
     public void setDenmohor(int denmohor) {
-        denmohor = denmohor;
+        this.denmohor = denmohor;
     }
 }
