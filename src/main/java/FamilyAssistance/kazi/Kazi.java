@@ -211,16 +211,15 @@ public class Kazi {
     String kaziUserName;
     String kaziEmail;
     String kaziPassword;
+    String authorised;
+
 
     public Kazi() {
 
     }
 
-    public Kazi(String kaziLicenceNumber, String kaziUserName, String kaziEmail, String kaziPassword, String name, String eduBackground, String dob, String nid, String tin, String officeAddress, String preferedArea, String contact) {
+    public Kazi(String kaziLicenceNumber, String name, String eduBackground, String dob, String nid, String tin, String officeAddress, String preferedArea, String contact, String kaziUserName, String kaziEmail, String kaziPassword, String authorised) {
         this.kaziLicenceNumber = kaziLicenceNumber;
-        this.kaziUserName = kaziUserName;
-        this.kaziEmail = kaziEmail;
-        this.kaziPassword = kaziPassword;
         this.name = name;
         this.eduBackground = eduBackground;
         this.dob = dob;
@@ -229,6 +228,18 @@ public class Kazi {
         this.officeAddress = officeAddress;
         this.preferedArea = preferedArea;
         this.contact = contact;
+        this.kaziUserName = kaziUserName;
+        this.kaziEmail = kaziEmail;
+        this.kaziPassword = kaziPassword;
+        this.authorised = authorised;
+    }
+
+    public String getAuthorised() {
+        return authorised;
+    }
+
+    public void setAuthorised(String authorised) {
+        this.authorised = authorised;
     }
 
     public String getName() {
