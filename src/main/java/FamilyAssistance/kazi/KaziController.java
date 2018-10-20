@@ -44,12 +44,17 @@ public class KaziController {
 
 	}
 
-	@RequestMapping(method=RequestMethod.PUT, value="/updatekazi/{id}")                //value="/updatekazi/{foo}
+	/*@RequestMapping(method=RequestMethod.PUT, value="/updatekazi/{id}")                //value="/updatekazi/{foo}
 	public String updateKazi(@RequestBody Kazi temp, @PathVariable long id) {        //@PathVariable("foo") String id    //erokm oo chole
 		ks.updateKazi(temp,id);
 		return "Successful Update Operation";
-		
-	}
+	}*/
+
+    @RequestMapping(method = RequestMethod.PUT, value = "/updatekazi")                //value="/updatekazi/{foo}
+    public String updateKazi(@RequestBody Kazi temp) {        //@PathVariable("foo") String id    //erokm oo chole
+        return "{ \"registration\":\"" + ks.updateKazi(temp) + "\"}";
+    }
+
 	
 	@RequestMapping(method=RequestMethod.DELETE, value="/deletekazi/{id}")
 	public String deleteKazi(@RequestBody Kazi temp, @PathVariable long id) {

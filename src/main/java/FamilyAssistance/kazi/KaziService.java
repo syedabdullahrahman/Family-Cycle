@@ -40,8 +40,9 @@ public class KaziService {
         return "Success";
     }
 
-    public void updateKazi(Kazi temp, Long id) {
-
+    public String updateKazi(Kazi temp) {
+        kaziRepository.save(temp);
+        return "Success";
     }
 
     public void deleteKazi(Kazi temp, Long id) {
