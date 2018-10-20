@@ -50,7 +50,7 @@ public class KaziController {
 		return "Successful Update Operation";
 	}*/
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/updatekazi")                //value="/updatekazi/{foo}
+    @RequestMapping(method = RequestMethod.POST, value = "/updatekazi")                //value="/updatekazi/{foo}
     public String updateKazi(@RequestBody Kazi temp) {        //@PathVariable("foo") String id    //erokm oo chole
         return "{ \"registration\":\"" + ks.updateKazi(temp) + "\"}";
     }
