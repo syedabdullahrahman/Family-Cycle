@@ -14,6 +14,12 @@ public class MarriedCouple {
     String mcemail;
 
     String mcusername;
+    String name;
+    String spouse_name;
+    String dob;
+    String sp_dob;
+    String marriage_date;
+    
 
     String password;
 
