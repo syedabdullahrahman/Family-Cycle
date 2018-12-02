@@ -3,7 +3,6 @@ package FamilyAssistance.marriedCouple;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 @Service
 public class MarriedCoupleService {
@@ -13,7 +12,7 @@ public class MarriedCoupleService {
     public MarriedCoupleService() {
     }
 
-    public List<MarriedCouple> getMarriedCouple(String email) {
+    public MarriedCouple getMarriedCouple(String email) {
 
         return mcRepository.findByMcemail(email);
     }
@@ -28,9 +27,13 @@ public class MarriedCoupleService {
     }
 
     public String addmc(MarriedCouple temp) {
-        if (!getMarriedCouple(temp.mcemail).isEmpty()) return "Couple Exists";
+        if (!getMarriedCouple(temp.mcemail).equals(null)) return "Couple Exists";
         mcRepository.save(temp);
         return "Success";
     }
 
+    public String updateMC(MarriedCouple temp) {
+        mcRepository.save(temp);
+        return "Success";
+    }
 }

@@ -26,4 +26,17 @@ public class MarriedCopuleController {
 
     }
 
+    @RequestMapping(value = "/findmc", params = {"email"})
+    public MarriedCouple getKazi(@RequestParam("email") String email) {
+        //lambda expression diya oo kemne jani kore !!!
+        return mcs.getMarriedCouple(email);
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/updatekazi")                //value="/updatekazi/{foo}
+    public String updateKazi(@RequestBody MarriedCouple temp) {        //@PathVariable("foo") String id    //erokm oo chole
+        return "{ \"registration\":\"" + mcs.updateMC(temp) + "\"}";
+    }
+
+
+
 }
