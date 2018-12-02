@@ -27,7 +27,12 @@ public class MarriedCoupleService {
     }
 
     public String addmc(MarriedCouple temp) {
-        if (!getMarriedCouple(temp.mcemail).equals(null)) return "Couple Exists";
+        try {
+            if (!getMarriedCouple(temp.mcemail).equals(new MarriedCouple()))
+                return "Couple Exists";
+        } catch (Exception e) {
+
+        }
         mcRepository.save(temp);
         return "Success";
     }
