@@ -19,14 +19,17 @@ public class MarriedCouple {
     String dob;
     String sp_dob;
     String marriage_date;
-
     String password;
+    String profile_picture;
+
+
 
     public MarriedCouple() {
 
     }
 
-    public MarriedCouple(String mcemail, String mcusername, String name, String spouse_name, String dob, String sp_dob, String marriage_date, String password) {
+
+    public MarriedCouple(String mcemail, String mcusername, String name, String spouse_name, String dob, String sp_dob, String marriage_date, String password, String profile_picture) {
         this.mcemail = mcemail;
         this.mcusername = mcusername;
         this.name = name;
@@ -35,6 +38,15 @@ public class MarriedCouple {
         this.sp_dob = sp_dob;
         this.marriage_date = marriage_date;
         this.password = password;
+        this.profile_picture = profile_picture;
+    }
+
+    public String getProfile_picture() {
+        return profile_picture;
+    }
+
+    public void setProfile_picture(String profile_picture) {
+        this.profile_picture = profile_picture;
     }
 
     public String getMcemail() {

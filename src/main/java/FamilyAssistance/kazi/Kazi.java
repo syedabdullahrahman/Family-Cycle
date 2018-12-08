@@ -213,12 +213,13 @@ public class Kazi {
     String kaziPassword;
     String authorised;
 
+    String profile_picture;
 
     public Kazi() {
 
     }
 
-    public Kazi(String kaziLicenceNumber, String name, String eduBackground, String dob, String nid, String tin, String officeAddress, String preferedArea, String contact, String kaziUserName, String kaziEmail, String kaziPassword, String authorised) {
+    public Kazi(String kaziLicenceNumber, String name, String eduBackground, String dob, String nid, String tin, String officeAddress, String preferedArea, String contact, String kaziUserName, String kaziEmail, String kaziPassword, String authorised, String profile_picture) {
         this.kaziLicenceNumber = kaziLicenceNumber;
         this.name = name;
         this.eduBackground = eduBackground;
@@ -232,6 +233,15 @@ public class Kazi {
         this.kaziEmail = kaziEmail;
         this.kaziPassword = kaziPassword;
         this.authorised = authorised;
+        this.profile_picture = profile_picture;
+    }
+
+    public String getProfile_picture() {
+        return profile_picture;
+    }
+
+    public void setProfile_picture(String profile_picture) {
+        this.profile_picture = profile_picture;
     }
 
     public String getAuthorised() {
