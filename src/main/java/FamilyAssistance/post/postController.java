@@ -1,4 +1,4 @@
-package FamilyAssistance.note;
+package FamilyAssistance.post;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

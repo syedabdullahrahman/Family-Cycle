@@ -1,4 +1,4 @@
-package FamilyAssistance.note;
+package FamilyAssistance.post;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
