@@ -2,15 +2,9 @@ package FamilyAssistance.post;
 
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 @Entity
 public class Post {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    long id;
 
     String title;
     String description;
@@ -28,15 +22,7 @@ public class Post {
         this.stage = stage;
         this.user_id = user_id;
     }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
+    
     public String getTitle() {
         return title;
     }
