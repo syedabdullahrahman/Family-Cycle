@@ -19,7 +19,7 @@ public class post {
     String user_id;
 
     public post() {
-        
+
     }
 
     public post(String title, String description, String stage, String user_id) {
