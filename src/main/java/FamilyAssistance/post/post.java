@@ -1,20 +1,16 @@
 package FamilyAssistance.post;
 
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class post {
 
     @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
-    @Column(name = "PR_KEY")
-    String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    long id;
 
     String title;
     String description;
@@ -29,11 +25,11 @@ public class post {
         this.user_id = user_id;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
