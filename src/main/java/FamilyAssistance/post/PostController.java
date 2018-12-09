@@ -26,9 +26,9 @@ public class PostController {
 
     }
 
-    @RequestMapping(value = "/find", params = {"userId", "stage"})
-    public List<Post> getKaziByName(@RequestParam("stage") String stage, @RequestParam("userId") Long userId) {
-        return ps.findPost(userId, stage);
+    @RequestMapping(value = "/find", params = {"userId"})
+    public List<Post> getKaziByName(@RequestParam("userId") Long userId) {
+        return ps.findPost(userId);
     }
 
 

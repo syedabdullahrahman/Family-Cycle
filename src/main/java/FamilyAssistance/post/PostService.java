@@ -24,7 +24,7 @@ public class PostService {
         return "Success";
     }
 
-    public List<Post> findPost(Long userId, String stage) {
-        return postRepository.findByUser_idAndAndStage(userId, stage);
+    public List<Post> findPost(Long userId) {
+        return postRepository.findByUser_idAndAndStage(userId);
     }
 }
