@@ -1,13 +1,13 @@
 package FamilyAssistance.post;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class post {
-
+public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
@@ -18,11 +18,11 @@ public class post {
     String stage;
     String user_id;
 
-    public post() {
+    public Post() {
 
     }
 
-    public post(String title, String description, String stage, String user_id) {
+    public Post(String title, String description, String stage, String user_id) {
         this.title = title;
         this.description = description;
         this.stage = stage;
