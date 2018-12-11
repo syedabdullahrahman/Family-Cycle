@@ -26,8 +26,9 @@ public class PostController {
 
     }
 
-    @RequestMapping("/login/{user_id}/{stage}")
+    @RequestMapping("/find/{user_id}/{stage}")
     public List<Post> getPost(@PathVariable("user_id") String user_id, @PathVariable("stage") String stage) {
+
         return ps.getPost(user_id, stage);
     }
 

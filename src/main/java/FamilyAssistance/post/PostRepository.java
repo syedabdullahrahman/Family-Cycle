@@ -5,6 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PostRepository extends CrudRepository<Post, Long> {
-
-    //List<Post> findByUser_idAndAndStage(String user_id, String stage);
+    
 }
