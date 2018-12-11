@@ -3,8 +3,10 @@ package FamilyAssistance.post;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface PostRepository extends CrudRepository<Post, Long> {
+import java.util.List;
 
-    Iterable<Post> findByUser_idAndAndStage(String user_id, String stage);
+@Repository
+public interface PostRepository extends CrudRepository<Post, String> {
+
+    List<Post> findByUser_idAndAndStage(String user_id, String stage);
 }

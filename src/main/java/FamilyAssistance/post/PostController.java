@@ -4,6 +4,8 @@ package FamilyAssistance.post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/FamilyAssistance/post")
 public class PostController {
@@ -25,7 +27,7 @@ public class PostController {
     }
 
     @RequestMapping("/login/{user_id}/{stage}")
-    public Iterable<Post> getPost(@PathVariable("user_id") String user_id, @PathVariable("stage") String stage) {
+    public List<Post> getPost(@PathVariable("user_id") String user_id, @PathVariable("stage") String stage) {
         return ps.getPost(user_id, stage);
     }
 

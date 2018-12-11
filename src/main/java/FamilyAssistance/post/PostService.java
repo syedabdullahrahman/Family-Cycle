@@ -4,6 +4,8 @@ package FamilyAssistance.post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PostService {
 
@@ -22,7 +24,7 @@ public class PostService {
         return "Success";
     }
 
-    public Iterable<Post> getPost(String user_id, String stage) {
+    public List<Post> getPost(String user_id, String stage) {
         return postRepository.findByUser_idAndAndStage(user_id, stage);
     }
 }
