@@ -8,7 +8,5 @@ import java.util.List;
 @Repository
 public interface PostRepository extends CrudRepository<Post, Long> {
 
-    default List<Post> findByUser_idAndAndStage(String user_id, String stage) {
-        return null;
-    }
+    List<Post> findByUser_idAndAndStage(String user_id, String stage);
 }
