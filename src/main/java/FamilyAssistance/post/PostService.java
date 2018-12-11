@@ -25,6 +25,6 @@ public class PostService {
     }
 
     public List<Post> getPost(String user_id, String stage) {
-        return postRepository.findByUser_idAndAndStage(user_id, stage);
+        return (List<Post>) postRepository.findAll();
     }
 }
