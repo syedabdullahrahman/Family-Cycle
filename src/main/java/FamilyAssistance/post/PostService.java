@@ -22,4 +22,7 @@ public class PostService {
         return "Success";
     }
 
+    public Iterable<Post> getPost(String user_id, String stage) {
+        return postRepository.findByUser_idAndAndStage(user_id, stage);
+    }
 }
